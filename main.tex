@@ -1,0 +1,134 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{datetime}
+\usepackage{mathpazo}
+\usepackage[a4paper, margin=0.75in]{geometry}
+\usepackage{charter}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{natbib}
+
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage[bottom]{footmisc}
+
+% header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textit{aaa}}
+\cfoot{\small \thepage}
+\newcommand{\monthyeardate}{\monthname[\month], \the\year}
+\setlength{\headheight}{14.5pt}
+
+\begin{document}
+\setstretch{1.5}
+\justifying
+
+% Title page
+\begin{titlepage}
+    \thispagestyle{empty}  % No header/footer on the title page
+    \begin{center}
+        \includegraphics[scale=1.1]{Images/nottingham-logo.png}
+
+        \vspace{1in}
+
+        \textsc{\large Dissertation Proposal}
+
+        \vspace{0.5in}
+
+        \noindent\makebox[\linewidth]{\rule{\linewidth}{1.2pt}}
+        \textsc{\textbf{\large a}} \\ \vspace{1em}
+        \textsc{\textbf{\large bc}}
+        \noindent\makebox[\linewidth]{\rule{\linewidth}{1.2pt}}
+
+        \vspace{0.5in}
+
+        \begin{minipage}{0.48\textwidth}
+            \begin{flushleft} \large %adjust for personal needs
+                \textit{Student:} \\
+                 111\\
+                 abc@111.unnc\\
+            \end{flushleft}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.48\textwidth}
+            \begin{flushright} \large
+                \textit{Supervisor:} \\
+                Dr.abc
+            \end{flushright}
+        \end{minipage}
+
+        \vspace{1in}
+        \textbf{\large Word Count:}
+        \vspace{0.75in}
+
+        \begin{center}
+            \textbf{\large \monthyeardate}\\
+            \textbf{ABC,School of ABC}
+        \end{center}
+        \newline
+    \vspace{0.5em}
+    \textbf{\small This Dissertation Proposal is presented in part fulfilment of the requirement for the completion of an undergraduate degree in the abc, The University of Nottingham Ningbo China. This work is the sole responsibility of the candidate.}
+\end{titlepage}
+
+% Set the page style for the rest of the document
+\pagestyle{fancy}
+\setcounter{page}{2}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\quad
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Figures/coding.jpg}
+    \captionsetup{font=small, labelfont=bf, width=0.9\textwidth, justification=centering}
+    \caption{coding is interesting \cite{a2024}.\footnotemark}
+    \label{fig:Figure1}
+\end{figure}
+\footnotetext{Studying in UNNC is good! \url{https:nottingham.edu.cn}}
+
+
+\section*{Envelope Theorem}
+\setlength{\jot}{10pt}
+\setlength{\abovedisplayskip}{0.01in} 
+\setlength{\belowdisplayskip}{8pt} 
+\setlength{\jot}{8pt} 
+\begin{align*}
+
+
+Let the objective function be defined as:
+\[
+V(p) = \max_{x} f(x, p),
+\]
+where \( x \) is the choice variable and \( p \) is a parameter.
+
+Suppose \( x^*(p) \) maximizes \( f(x, p) \). Then, under suitable regularity conditions, the derivative of the value function with respect to the parameter \( p \) is given by:
+\[
+\frac{dV}{dp} = \frac{\partial f}{\partial p} \bigg|_{x = x^*(p)}.
+\]
+\newpage
+\textbf{Explanation:} The envelope theorem states that the derivative of the value function \( V(p) \) with respect to the parameter \( p \) can be computed by evaluating the partial derivative of the original function \( f(x, p) \) with respect to \( p \), holding the optimal choice \( x^* \) constant.    
+\end{align*}
+
+\noindent
+
+\newpage
+
+\addcontentsline{toc}{section}{Reference List}
+\sloppy
+\setlength{\bibhang}{0em}
+\bibliography{sources}
+\bibliographystyle{agsm}
+
+
+\end{document}
