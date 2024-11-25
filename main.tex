@@ -1,30 +1,30 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 12pt]{article}%文件类型和正文文本大小
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{fancyhdr}
-\usepackage{datetime}
-\usepackage{mathpazo}
-\usepackage[a4paper, margin=0.75in]{geometry}
-\usepackage{charter}
-\usepackage{caption}
-\usepackage{float}
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{fancyhdr}%正文风格
+\usepackage{datetime}%日期
+\usepackage{mathpazo}%漂亮的支持数学公式的字体
+\usepackage[a4paper, margin=0.75in]{geometry} %页边距
+\usepackage{charter}%目录
+\usepackage{caption}%图注
+\usepackage{float}%控制正文插入图片位置
+\usepackage{amsmath}%数学公式
+\usepackage{amssymb}%数学公式
 \usepackage{bm}
-\usepackage{natbib}
+\usepackage{natbib}%Citation宏包
 
 \usepackage{hyperref}
 \usepackage{setspace}
 \usepackage{ragged2e}
-\usepackage[bottom]{footmisc}
+\usepackage[bottom]{footmisc}%脚注设定
 
 % header and footer
-\pagestyle{fancy}
+\pagestyle{fancy}%正文风格
 \fancyhf{}
 \lhead{\textit{aaa}}
-\cfoot{\small \thepage}
-\newcommand{\monthyeardate}{\monthname[\month], \the\year}
+\cfoot{\small \thepage} %自己按照需求随便改
+\newcommand{\monthyeardate}{\monthname[\month], \the\year} %参考daytime宏包，可以自己随便改
 \setlength{\headheight}{14.5pt}
 
 \begin{document}
@@ -100,7 +100,7 @@
 
 \section*{Envelope Theorem}
 \setlength{\jot}{10pt}
-\setlength{\abovedisplayskip}{0.01in} 
+\setlength{\abovedisplayskip}{0.01in} %公式部分行间距设定
 \setlength{\belowdisplayskip}{8pt} 
 \setlength{\jot}{8pt} 
 \begin{align*}
@@ -124,11 +124,11 @@ Suppose \( x^*(p) \) maximizes \( f(x, p) \). Then, under suitable regularity co
 
 \newpage
 
-\addcontentsline{toc}{section}{Reference List}
-\sloppy
+\addcontentsline{toc}{section}{Reference List}%contents单独加Reference部分 解决了natbib宏包的冲突
+\sloppy %全部强制向左对齐
 \setlength{\bibhang}{0em}
-\bibliography{sources}
-\bibliographystyle{agsm}
+\bibliography{sources}%source文件 直接导入bib tex就可以啦
+\bibliographystyle{agsm}%agsm是Harvard style
 
 
 \end{document}
